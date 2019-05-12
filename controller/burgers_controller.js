@@ -6,7 +6,7 @@ const router = express.Router();
 router.get('/', function (req, res) {
     Burger.getAll().then(results=>{
         console.log("here",results);
-        res.render("index", results);
+        res.render("index", {burger:results});
     })
 })
 
