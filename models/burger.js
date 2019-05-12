@@ -43,6 +43,7 @@ class Burger {
     }
 }
 
+module.exports = Burger;
 //TEST:
 // Burger.getAll().then(console.log);
 // const burger = new Burger("The Varsity2",false,1);
