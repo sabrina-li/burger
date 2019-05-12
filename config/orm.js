@@ -28,9 +28,10 @@ const orm = {
 
 //TEST:
 // orm.selectAll().then(console.log);
-data={
-    devoured: 0
-}
-orm.updateOne(data,4).then(console.log)
+// data={
+//     devoured: 0
+// }
+// orm.insertOne(data).then(console.log)
+// orm.updateOne(data,4).then(console.log)
 
 module.exports = orm;
