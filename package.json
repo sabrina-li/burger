@@ -1,0 +1,24 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "burger tracker full stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrina-li/burger.git"
+  },
+  "author": "Sabrina L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabrina-li/burger/issues"
+  },
+  "homepage": "https://github.com/sabrina-li/burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1"
+  }
+}
