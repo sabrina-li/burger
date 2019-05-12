@@ -1,9 +1,9 @@
 <aside id="not-eaten">
     <ol>
         {{#each burger}}
-            {{#if devoured}}
-                 <li>{{burger_name}}</li>
-            {{/if}}
+            {{#unless devoured}}
+                 <li>{{burger_name}}<span><button>Devour</button></span></li>
+            {{/unless}}
         {{/each}}
     </ol>
 </aside>

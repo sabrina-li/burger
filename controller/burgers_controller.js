@@ -10,12 +10,12 @@ router.get('/', function (req, res) {
     })
 })
 
-router.get('/api/all', function (req, res) {
-//all burgers
-})
-
-router.post('/api/add',function(req,res){
-//add new burger
+router.post('/api/burger',function(req,res){
+    console.log(req.body.burger_name);
+    const burger = new Burger(req.body.burger_name,false);
+    burger.add().then(id=>{
+        res.send({id:id});
+    })
 })
 
 router.put('/api/devour',function(req,res){
