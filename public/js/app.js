@@ -11,9 +11,20 @@ $(document).ready(function(){
                 console.log(res);
                 location.reload();
             })
-
         }
-        
       });
-      
+
+      $('.burger-devour').on('click',function(event){
+          
+        if($(this).attr('data')){
+            $.ajax({
+                url: "api/burger",
+                method:"PUT",
+                data: {id:$(this).attr('data'),devour:true}
+            }).then(res=>{
+                console.log(res);
+                location.reload();
+            })
+        }
+      })
 })

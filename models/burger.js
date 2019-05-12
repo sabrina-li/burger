@@ -30,12 +30,12 @@ class Burger {
 
     devour(){
         //if burger didn't have an id(not in DB)), throw error
+        console.log(this);
         if(!this._id){
             return Promise.reject("burger not added to DB yet!"); 
         }else{
             this._devoured = true;
             const burgerData = {
-                burger_name:this._burger_name,
                 devoured:this._devoured
             }
             return  orm.updateOne(burgerData,this._id);

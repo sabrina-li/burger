@@ -11,6 +11,7 @@ router.get('/', function (req, res) {
 })
 
 router.post('/api/burger',function(req,res){
+//new burger
     console.log(req.body.burger_name);
     const burger = new Burger(req.body.burger_name,false);
     burger.add().then(id=>{
@@ -18,8 +19,13 @@ router.post('/api/burger',function(req,res){
     })
 })
 
-router.put('/api/devour',function(req,res){
+router.put('/api/burger',function(req,res){
 //eat the burger
+    console.log(req.body);
+    const burger = new Burger("",true,req.body.id);
+    burger.devour().then(id=>{
+        res.send({id:id});
+    })
 })
 
 

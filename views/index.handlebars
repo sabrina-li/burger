@@ -2,7 +2,7 @@
     <ol>
         {{#each burger}}
             {{#unless devoured}}
-                 <li>{{burger_name}}<span><button>Devour</button></span></li>
+                 <li>{{burger_name}} <span><button class="burger-devour" data="{{id}}">Devour</button></span></li>
             {{/unless}}
         {{/each}}
     </ol>
