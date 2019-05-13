@@ -2,7 +2,7 @@
     <ol>
         {{#each burger}}
             {{#unless devoured}}
-                 <li>{{burger_name}} <span><button class="burger-devour" data="{{id}}">Devour</button></span></li>
+                 {{> burgers/burger-block eaten=false}}
             {{/unless}}
         {{/each}}
     </ol>
@@ -12,7 +12,7 @@
 <ol>
     {{#each burger}}
         {{#if devoured}}
-                <li>{{burger_name}}</li>
+                {{> burgers/burger-block eaten=true}}
         {{/if}}
     {{/each}}
     </ol>
